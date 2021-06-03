@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">ContasPagar</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="TituloEdicaoDataEmissao">Emissão</string>
+    <string name="TituloEdicaoDataVencimento">Vencimento</string>
+    <string name="TituloEdicaoDataPagamento">Pagamento</string>
+    <string name="MsgErroExclusaoDocumento">Erro na exclusão do documento</string>
+    <string name="MsgErroSalvarDocumento">Erro ao salvar o documento</string>
+    <string name="TituloToolbarIncluirDocumento">Incluindo</string>
+    <string name="TituloToolbarEditarDocumento">Editando</string>
+    <string name="MsgErroObterDados">Erro na obtenção dos dados</string>
+    <string name="TextoBotaoOKCalendario">OK</string>
+    <string name="TextoBotaoCancelarCalendario">Cancelar</string>
+</resources>

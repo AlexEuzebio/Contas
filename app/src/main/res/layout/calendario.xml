@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/txtTituloCalendario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_gravity="center_horizontal"
+        android:textAlignment="center"
+        android:paddingVertical="8dp"
+        tools:text="Selecione a Emissão"
+        />
+
+    <CalendarView
+        android:id="@+id/cldCalendario"
+        style="@android:style/Widget.DeviceDefault.CalendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#B9D7F1"
+        android:clickable="true"
+        android:dateTextAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:showWeekNumber="true"
+        android:weekDayTextAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:weekNumberColor="#065BA6" />
+
+</LinearLayout>

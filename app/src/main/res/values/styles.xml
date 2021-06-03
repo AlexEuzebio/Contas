@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="LabelTextTituloDocumento">
+        <item name="android:layout_height">12dp</item>
+        <item name="android:textSize">9sp</item>
+    </style>
+    <style name="EditTextDocumento">
+        <item name="android:layout_height">40dp</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="LabelTextDataDocumento">
+        <item name="android:layout_height">40dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+</resources>

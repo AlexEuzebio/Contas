@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lnlMain"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tbrDocumento"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="?colorPrimary"
+        app:title="Editando documento"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="4dp"
+        >
+
+        <TextView
+            android:id="@+id/txtLabelDescricaoDoc"
+            style="@style/LabelTextTituloDocumento"
+            android:layout_width="0dp"
+            android:text="Descrição:"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <EditText
+            android:id="@+id/edtDescricaoDoc"
+            style="@style/EditTextDocumento"
+            android:layout_width="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtLabelDescricaoDoc"
+            tools:text="Compra do mês"
+            />
+
+        <TextView
+            android:id="@+id/txtLabelTerceiroDoc"
+            style="@style/LabelTextTituloDocumento"
+            android:layout_width="0dp"
+            android:text="Estabelecimento/Credor:"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edtDescricaoDoc"
+            />
+
+        <EditText
+            android:id="@+id/edtTerceiroDoc"
+            style="@style/EditTextDocumento"
+            android:layout_width="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtLabelTerceiroDoc"
+            tools:text="Supermercado Trimais"
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ctlLayoutValor"
+            android:layout_width="0dp"
+            app:layout_constraintWidth_percent="0.4"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edtTerceiroDoc" >
+
+            <TextView
+                android:id="@+id/txtLabelValorDoc"
+                style="@style/LabelTextTituloDocumento"
+                android:text="Valor:"
+                android:layout_width="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.7"
+                />
+
+            <EditText
+                android:id="@+id/edtValorDoc"
+                style="@style/EditTextDocumento"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:layout_width="0dp"
+                app:layout_constraintStart_toStartOf="@id/txtLabelValorDoc"
+                app:layout_constraintEnd_toEndOf="@id/txtLabelValorDoc"
+                app:layout_constraintTop_toBottomOf="@id/txtLabelValorDoc"
+                tools:text="123,00"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ctlLayoutEmissao"
+            android:layout_width="0dp"
+            app:layout_constraintWidth_percent="0.4"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ctlLayoutValor"
+            >
+
+            <TextView
+                android:id="@+id/txtLabelEmissao"
+                style="@style/LabelTextTituloDocumento"
+                android:text="Emissão:"
+                android:layout_width="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintWidth_percent=".7"
+                />
+
+            <TextView
+                android:id="@+id/txtEmissao"
+                style="@style/LabelTextDataDocumento"
+                android:layout_width="0dp"
+                app:layout_constraintEnd_toEndOf="@id/txtLabelEmissao"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtLabelEmissao"
+                tools:text="10/6/2021"
+                />
+
+            <ImageView
+                android:id="@+id/imgLimparEmissao"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/txtEmissao"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:src="@android:drawable/ic_delete"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ctlLayoutVencimento"
+            android:layout_width="0dp"
+            app:layout_constraintWidth_percent="0.4"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ctlLayoutValor" >
+
+            <TextView
+                android:id="@+id/txtLabelVencimentoDoc"
+                style="@style/LabelTextTituloDocumento"
+                android:layout_width="0dp"
+                android:text="Vencimento:"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintWidth_percent=".7"
+                />
+
+            <TextView
+                android:id="@+id/txtVencimento"
+                style="@style/LabelTextDataDocumento"
+                android:layout_width="0dp"
+                app:layout_constraintEnd_toEndOf="@id/txtLabelVencimentoDoc"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtLabelVencimentoDoc"
+                tools:text="15/07/2021"
+                />
+
+            <ImageView
+                android:id="@+id/imgLimparVencimento"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/txtVencimento"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:src="@android:drawable/ic_delete"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ctlLayoutPagamento"
+            android:layout_width="0dp"
+            app:layout_constraintWidth_percent="0.4"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ctlLayoutVencimento" >
+
+            <TextView
+                android:id="@+id/txtLabelPagamento"
+                style="@style/LabelTextTituloDocumento"
+                android:layout_width="0dp"
+                android:text="Pagamento:"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintWidth_percent=".7"
+                />
+
+            <TextView
+                android:id="@+id/txtPagamento"
+                style="@style/LabelTextDataDocumento"
+                android:layout_width="0dp"
+                app:layout_constraintEnd_toEndOf="@id/txtLabelPagamento"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtLabelPagamento"
+                tools:text="15/07/2021"
+                />
+
+            <ImageView
+                android:id="@+id/imgLimparPagamento"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/txtPagamento"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:src="@android:drawable/ic_delete"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ctlLayoutBotoes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ctlLayoutPagamento" >
+
+        <Button
+            android:id="@+id/btnSalvar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="48dp"
+            android:text="Salvar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <Button
+            android:id="@+id/btnExcluir"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Excluir"
+            app:layout_constraintStart_toStartOf="@id/btnSalvar"
+            app:layout_constraintEnd_toEndOf="@id/btnSalvar"
+            app:layout_constraintTop_toBottomOf="@id/btnSalvar"
+            />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>
