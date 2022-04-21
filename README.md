@@ -1,5 +1,5 @@
 # Contas
-Projeto de prática Bootcamp everis-Kotlin
+Projeto Bootcamp everis-Kotlin
 
 ### Descrição:
 App Android/Kotlin de cadastro de contas a pagar com os dados de:
